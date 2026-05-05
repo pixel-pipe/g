@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explanation - Plumber Rush</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: #6b8cff;
+    color: #fff;
+    font-family: "Courier New", monospace;
+  }
+  main {
+    width: min(860px, calc(100vw - 28px));
+    border: 4px solid #421707;
+    background: #c94e08;
+    padding: 24px;
+    box-shadow: 12px 12px 0 #111;
+  }
+  h1 {
+    margin: 0 0 18px;
+    color: #ffd0c0;
+    font-size: clamp(32px, 6vw, 64px);
+    line-height: 1;
+    text-shadow: 8px 8px 0 #1b0d08;
+  }
+  section {
+    border: 3px solid #111;
+    background: #1f2937;
+    padding: 16px;
+    margin-top: 14px;
+  }
+  h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: #fde68a;
+  }
+  p, li {
+    font-size: 18px;
+    line-height: 1.45;
+  }
+  a {
+    color: #fff;
+    font-weight: 900;
+    text-decoration: none;
+  }
+  .actions {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .button {
+    display: inline-block;
+    border: 3px solid #111;
+    background: #f97316;
+    padding: 10px 14px;
+    box-shadow: 5px 5px 0 #111;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>EXPLANATION</h1>
+  <section>
+    <h2>Goal</h2>
+    <p>Reach the flag at the end of each stage. Stage 3 has a boss near the flag, and Stage 4 is an aerial route built around paired seesaw platforms, mushroom relay perches, and rideable side-view airplanes.</p>
+  </section>
+  <section>
+    <h2>Controls</h2>
+    <ul>
+      <li>Move: A / D or Arrow Left / Arrow Right</li>
+      <li>Jump: W, Arrow Up, or Space</li>
+      <li>Double jump: press jump again in the air</li>
+      <li>Firebolt while Super Mario: Circle button, X key, or F key</li>
+      <li>Enter pipe: S or Arrow Down while standing on a pipe</li>
+      <li>Return to main menu: R</li>
+      <li>PlayStation controller: left stick or D-pad to move, Cross to jump, Options/R1/R2 to return to menu</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Items</h2>
+    <p>Question blocks can release 1UP, grow, shrink, flight, and helper companion items. Rare blocks and hidden bricks can contain stronger items.</p>
+  </section>
+  <div class="actions">
+    <a class="button" href="mario.html">BACK TO MAIN MENU</a>
+    <a class="button" href="mario.html">START GAME</a>
+  </div>
+</main>
+<script src="menu-controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings - Plumber Rush</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: #6b8cff;
+    color: #fff;
+    font-family: "Courier New", monospace;
+  }
+  main {
+    width: min(860px, calc(100vw - 28px));
+    border: 4px solid #421707;
+    background: #c94e08;
+    padding: 24px;
+    box-shadow: 12px 12px 0 #111;
+  }
+  h1 {
+    margin: 0 0 18px;
+    color: #ffd0c0;
+    font-size: clamp(32px, 6vw, 64px);
+    line-height: 1;
+    text-shadow: 8px 8px 0 #1b0d08;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+  }
+  a, .panel {
+    color: #fff;
+    text-decoration: none;
+    border: 3px solid #111;
+    background: #1f2937;
+    padding: 16px;
+    box-shadow: 5px 5px 0 #111;
+  }
+  a strong, .panel strong {
+    display: block;
+    color: #fde68a;
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.4;
+  }
+  .actions {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .button {
+    display: inline-block;
+    background: #f97316;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>SETTINGS</h1>
+  <div class="grid">
+    <a href="mario.html?stage=1&single=1&enemyType=kuribo&v=2026-05-05-stage1-secret-sky-v3">
+      <strong>STAGE 1</strong>
+      <p>Start directly from Overworld for quick testing.</p>
+    </a>
+    <a href="mario.html?stage=2&single=1&enemyType=nokonoko&v=2026-05-05-stage1-secret-sky-v3">
+      <strong>STAGE 2</strong>
+      <p>Start directly from Underground for quick testing.</p>
+    </a>
+    <a href="mario.html?stage=3&single=1&enemyType=bombhei&v=2026-05-05-stage1-secret-sky-v3">
+      <strong>STAGE 3</strong>
+      <p>Start directly from Castle and the boss route.</p>
+    </a>
+    <a href="mario.html?stage=4&single=1&enemyType=kuribo&v=2026-05-05-stage1-secret-sky-v3">
+      <strong>STAGE 4</strong>
+      <p>Start directly from Sky Seesaw and its paired lift platforms.</p>
+    </a>
+    <div class="panel">
+      <strong>AUDIO</strong>
+      <p>Stage BGM is loaded from assets/bgm. Flag clear music stops the stage BGM before playing the clear cue.</p>
+    </div>
+  </div>
+  <div class="actions">
+    <a class="button" href="mario.html?v=2026-05-05-stage1-secret-sky-v3">BACK TO MAIN MENU</a>
+    <a class="button" href="orchestrator.html?v=2026-05-05-stage1-secret-sky-v3">STAGE LAUNCHER</a>
+  </div>
+</main>
+<script src="menu-controller.js"></script>
+</body>
+</html>

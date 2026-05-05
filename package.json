@@ -1,0 +1,12 @@
+{
+  "name": "plumber-rush",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:assets": "node generate-gpt-image-2-assets.mjs"
+  },
+  "dependencies": {
+    "openai": "^6.35.0"
+  }
+}
