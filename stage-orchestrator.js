@@ -7,7 +7,7 @@
     { number: 3, world: "1-3", name: "Castle", file: "stage-3.html", enemyType: "bombhei" },
     { number: 4, world: "1-4", name: "Sky Seesaw", file: "stage-4.html", enemyType: "kuribo" }
   ];
-  const GAME_ASSET_VERSION = "2026-05-05-menu-arrows-v1";
+  const GAME_ASSET_VERSION = "2026-05-05-auth-v1";
 
   const root = document.getElementById("stageRoot") || document.body;
   const mode = document.body.dataset.mode || (document.body.dataset.stage ? "stage" : "hub");

@@ -114,6 +114,18 @@ Audio:
 - `?bgm=<audio-url>` can still override the stage BGM for quick testing.
 - Browser audio starts after the first key, click, or controller button input.
 
+## Access protection
+
+This deployment is private. Pages reject direct access unless the visitor either has the access key in the URL hash or has previously stored the key in `localStorage` from a prior authenticated visit.
+
+- Access link: `https://pixel-pipe.github.io/g/#k=plumber-2026-key`
+- After the first visit, the key is cached in `localStorage` so subsequent visits to `https://pixel-pipe.github.io/g/` succeed without the hash.
+- All HTML files load `auth-guard.js` first; on auth failure the page is replaced with an `Access denied` notice and further loading is stopped via `window.stop()`.
+- All HTML files declare `<meta name="robots" content="noindex, nofollow">`, and `robots.txt` declares `Disallow: /`, so search engines stop adding new entries.
+- The repository itself stays public (GitHub Free tier limitation), so the source files are still readable on github.com. The protection is intended as a casual gate against accidental visitors, not as cryptographic security.
+
+To rotate the key, change `SECRET` in `auth-guard.js` and bump the cache version. Existing visitors with cached keys will be locked out at next reload.
+
 ## Playing on PS5 via GitHub Pages
 
 This project ships as plain HTML, CSS, JavaScript, and static assets. It can be hosted on GitHub Pages and opened from the PS5 hidden browser.
