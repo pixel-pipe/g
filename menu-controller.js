@@ -67,9 +67,12 @@
       return;
     }
 
+    const axisX = pad.axes[0] || 0;
     const axisY = pad.axes[1] || 0;
-    const up = axisY < -DEADZONE || buttonPressed(pad, 12);
-    const down = axisY > DEADZONE || buttonPressed(pad, 13);
+    const up = axisY < -DEADZONE || axisX < -DEADZONE ||
+      buttonPressed(pad, 12) || buttonPressed(pad, 14);
+    const down = axisY > DEADZONE || axisX > DEADZONE ||
+      buttonPressed(pad, 13) || buttonPressed(pad, 15);
     const confirm = buttonPressed(pad, 0) || buttonPressed(pad, 1);
     const back = buttonPressed(pad, 9) || buttonPressed(pad, 5) || buttonPressed(pad, 7);
 
@@ -99,10 +102,12 @@
 
   window.addEventListener("keydown", (event) => {
     if (!items.length) return;
-    if (event.code === "ArrowUp" || event.code === "KeyW") {
+    if (event.code === "ArrowUp" || event.code === "KeyW" ||
+        event.code === "ArrowLeft" || event.code === "KeyA") {
       event.preventDefault();
       move(-1);
-    } else if (event.code === "ArrowDown" || event.code === "KeyS") {
+    } else if (event.code === "ArrowDown" || event.code === "KeyS" ||
+               event.code === "ArrowRight" || event.code === "KeyD") {
       event.preventDefault();
       move(1);
     } else if (event.code === "Enter" || event.code === "Space") {

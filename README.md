@@ -41,7 +41,7 @@ Controls:
 - Enter secret pipe: `S` or `ArrowDown` while standing on the pipe
 - Double jump: press jump again in the air
 - Firebolt while Super Mario: PlayStation Circle (`〇`), `X` key, or `F` key
-- Main menu selection: `W` / `ArrowUp` and `S` / `ArrowDown`
+- Main menu selection: `W` / `ArrowUp` / `A` / `ArrowLeft` (previous), `S` / `ArrowDown` / `D` / `ArrowRight` (next)
 - Confirm main menu: `Enter`, `Space`, click, or PlayStation Cross/Circle
 - Return to main menu / restart flow: `R`
 - After TRY AGAIN: press any key, click, or press a PlayStation controller button to restart the current stage from its beginning
@@ -76,16 +76,18 @@ Stage gimmicks:
 
 PlayStation 5 controller over USB:
 
-- Main menu: left stick or D-pad up/down to move the cursor, Cross/Circle to confirm
-- Menu detail pages: left stick or D-pad up/down to focus links, Cross/Circle to open, Options/R1/R2 to return to the main menu
+- Main menu: left stick (any direction) or D-pad (up / down / left / right) to move the cursor, Cross/Circle to confirm. The landing page (`index.html`) and the in-game main menu both accept horizontal navigation, so a single thumb action moves between adjacent stage tiles.
+- Menu detail pages: left stick (any direction) or D-pad (up / down / left / right) to focus links, Cross/Circle to open, Options/R1/R2 to return to the main menu
 - Move: left stick or D-pad
 - Jump: Cross button
 - Double jump: press Cross again in the air
 - Firebolt while Super Mario: Circle button
 - Enter secret pipe: press down on the left stick or D-pad while standing on the pipe
-- Restart: Options, R1, or R2 button
-- Restart flow after TRY AGAIN: any controller button restarts the current stage from its beginning
-- Restart flow after GAME OVER / All Clear: any controller button returns to the main menu
+- Restart: Options button
+- Cancel / return to main menu: R1 or R2 button. Pressing R1 or R2 during play, on TRY AGAIN, on GAME OVER, or on All Clear returns to the in-game main menu (Start Game / Explanation / Settings / Source Code / Quit).
+- Return to landing page: pressing R1 or R2 again while the in-game main menu is shown navigates back up to `index.html` (the landing page that hosts the global PLAY and per-stage entries). This works through any iframe wrapper (`orchestrator.html`, `stage-N.html`) thanks to `window.top.location.href`.
+- Restart flow after TRY AGAIN: any controller button other than R1 / R2 restarts the current stage from its beginning. R1 or R2 cancels back to the in-game main menu instead.
+- Restart flow after GAME OVER / All Clear: any controller button returns to the in-game main menu
 
 Most browsers require one controller button press after the page opens before the controller appears to the Gamepad API.
 
